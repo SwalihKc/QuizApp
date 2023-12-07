@@ -1,22 +1,24 @@
-import 'package:artifia_quiz_app/view/quiz_Page.dart';
+import 'package:artifia_quiz_app/viewModel/quiz_Page.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key});
+class MyHome_Page extends StatefulWidget {
+  const MyHome_Page({
+    super.key,
+  });
 
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  State<MyHome_Page> createState() => _MyHome_PageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _MyHome_PageState extends State<MyHome_Page> {
   @override
   Widget build(BuildContext context) {
     final higt = MediaQuery.of(context).size.height;
     final width = MediaQuery.of(context).size.width;
 
     return Scaffold(
-      backgroundColor: const Color.fromARGB(1, 72, 20, 80),
+      backgroundColor: Colors.purple[800],
       body: Column(
         children: [
           Container(
@@ -42,11 +44,11 @@ class _MyHomePageState extends State<MyHomePage> {
                   children: [
                     ElevatedButton(
                       onPressed: () {
+                        
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => Quiz_page(),
-                            ));
+                                builder: (context) => Quiz_page()));
                       },
                       child: Text(
                         'Start Quiz',

@@ -53,17 +53,20 @@ class Option {
   String text;
   bool isCorrect;
   String id;
+ 
 
   Option({
     required this.text,
     required this.isCorrect,
     required this.id,
+ 
   });
 
   factory Option.fromJson(Map<String, dynamic> json) => Option(
         text: json["text"],
         isCorrect: json["isCorrect"],
         id: json["_id"],
+
       );
 
   Map<String, dynamic> toJson() => {
@@ -71,4 +74,6 @@ class Option {
         "isCorrect": isCorrect,
         "_id": id,
       };
+      
 }
+
